@@ -1,151 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sethi Electronics Co | Since 1971</title>
-    <meta name="description" content="Sethi Electronics Co, Silapathar Assam. Trusted electronics store since 1971. AC, TV, Fridge, Washing Machine, Sewing Machines and more.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-        body{background:#f9fafb;color:#333}
-        header{background:#0f172a;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center}
-        header h1{font-size:24px}
-        nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:500}
-        nav a:hover{color:#38bdf8}
-        .hero{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://via.placeholder.com/1400x600');background-size:cover;background-position:center;color:#fff;padding:120px 20px;text-align:center}
-        .hero h2{font-size:42px;margin-bottom:15px}
-        .hero p{font-size:18px;margin-bottom:25px}
-        .btn{background:#38bdf8;color:#000;padding:12px 25px;border:none;border-radius:30px;text-decoration:none;font-weight:600}
-        .btn:hover{background:#0ea5e9;color:#fff}
-        section{padding:70px 20px;max-width:1200px;margin:auto}
-        section h3{text-align:center;font-size:32px;margin-bottom:40px;color:#0f172a}
-        .about,.services,.contact,.gallery,.updates{background:#fff;border-radius:20px;padding:40px;box-shadow:0 4px 15px rgba(0,0,0,0.05)}
-        .about p{text-align:center;font-size:17px;line-height:1.7}
-        .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
-        .service-card{background:#f1f5f9;padding:25px;border-radius:15px;text-align:center;font-weight:500}
-        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-        .gallery-item{background:#e2e8f0;height:180px;border-radius:15px;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:14px}
-        .contact-info{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;text-align:center}
-        .contact-box{background:#f8fafc;padding:25px;border-radius:15px}
-        footer{background:#020617;color:#fff;text-align:center;padding:25px;margin-top:60px}
-        footer a{color:#38bdf8;text-decoration:none}
-        @media(max-width:768px){
-            header{flex-direction:column;gap:10px}
-            nav a{margin:0 10px}
-            .hero h2{font-size:32px}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sethi Electronics Co | Since 1971</title>
+  <meta name="description" content="Sethi Electronics Co, Silapathar Assam. Trusted electronics store since 1971. AC, TV, Fridge, Washing Machine, Sewing Machines and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#f9fafb;color:#333}
+
+    header{background:#0f172a;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center}
+    header h1{font-size:24px}
+    nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:500}
+    nav a:hover{color:#38bdf8}
+
+    /* Offer Banner */
+    .offer{
+      background:#22c55e;
+      color:#fff;
+      text-align:center;
+      padding:10px;
+      font-weight:600;
+    }
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://via.placeholder.com/1400x600');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      padding:120px 20px;
+      text-align:center
+    }
+
+    .hero h2{font-size:42px;margin-bottom:15px}
+    .hero p{font-size:18px;margin-bottom:25px}
+
+    .btn{
+      background:#38bdf8;
+      color:#000;
+      padding:12px 25px;
+      border:none;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:600
+    }
+
+    .btn:hover{background:#0ea5e9;color:#fff}
+
+    section{padding:70px 20px;max-width:1200px;margin:auto}
+
+    section h3{text-align:center;font-size:32px;margin-bottom:40px;color:#0f172a}
+
+    .about,.services,.contact,.gallery,.updates,.map{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.05)
+    }
+
+    .about p{text-align:center;font-size:17px;line-height:1.7}
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px
+    }
+
+    .service-card{
+      background:#f1f5f9;
+      padding:25px;
+      border-radius:15px;
+      text-align:center;
+      font-weight:500
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px
+    }
+
+    .gallery-item{
+      background:#e2e8f0;
+      height:180px;
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#64748b;
+      font-size:14px
+    }
+
+    .contact-info{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      text-align:center
+    }
+
+    .contact-box{
+      background:#f8fafc;
+      padding:25px;
+      border-radius:15px
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      background:#25d366;
+      color:#fff;
+      border-radius:50%;
+      width:60px;
+      height:60px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      text-decoration:none;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      z-index:999
+    }
+
+    .whatsapp-float:hover{background:#1ebe5d}
+
+    footer{
+      background:#020617;
+      color:#fff;
+      text-align:center;
+      padding:25px;
+      margin-top:60px
+    }
+
+    footer a{color:#38bdf8;text-decoration:none}
+
+    @media(max-width:768px){
+      header{flex-direction:column;gap:10px}
+      nav a{margin:0 10px}
+      .hero h2{font-size:32px}
+    }
+  </style>
 </head>
+
 <body>
 
+<!-- Offer Banner -->
+<div class="offer">
+  🎉 Special Offers Available! Visit Our Store Today | Call: 9954932233
+</div>
+
 <header>
-    <h1>Sethi Electronics Co</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Products</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#updates">Updates</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <h1>Sethi Electronics Co</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Products</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#updates">Updates</a>
+    <a href="#map">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero" id="home">
-    <h2>Name of Trust Since 1971</h2>
-    <p>Your Trusted Electronics Store in Silapathar, Assam</p>
-    <a href="#contact" class="btn">Contact Us</a>
+  <h2>Name of Trust Since 1971</h2>
+  <p>Your Trusted Electronics Store in Silapathar, Assam</p>
+  <a href="#contact" class="btn">Contact Us</a>
 </section>
 
 <section id="about">
-    <h3>About Us</h3>
-    <div class="about">
-        <p>
-            Sethi Electronics Co has been serving customers in Silapathar, Assam since 1971. 
-            We provide quality electronics products and reliable service. 
-            Our goal is to give every customer the best value, honest advice, and long-term support.
-        </p>
-    </div>
+  <h3>About Us</h3>
+  <div class="about">
+    <p>
+      Sethi Electronics Co has been serving customers in Silapathar, Assam since 1971.
+      We provide quality electronics products and reliable service.
+      Our goal is to give every customer the best value, honest advice, and long-term support.
+    </p>
+  </div>
 </section>
 
 <section id="services">
-    <h3>Our Products & Services</h3>
-    <div class="services">
-        <div class="service-grid">
-            <div class="service-card">Sewing Machines</div>
-            <div class="service-card">Air Conditioners (AC)</div>
-            <div class="service-card">Refrigerators</div>
-            <div class="service-card">Televisions (TV)</div>
-            <div class="service-card">Washing Machines</div>
-            <div class="service-card">Home Appliances</div>
-            <div class="service-card">Electronics Accessories</div>
-            <div class="service-card">Sales & Support</div>
-        </div>
+  <h3>Our Products & Services</h3>
+  <div class="services">
+    <div class="service-grid">
+      <div class="service-card">Sewing Machines</div>
+      <div class="service-card">Air Conditioners (AC)</div>
+      <div class="service-card">Refrigerators</div>
+      <div class="service-card">Televisions (TV)</div>
+      <div class="service-card">Washing Machines</div>
+      <div class="service-card">Home Appliances</div>
+      <div class="service-card">Electronics Accessories</div>
+      <div class="service-card">Sales & Support</div>
     </div>
+  </div>
 </section>
 
 <section id="gallery">
-    <h3>Gallery</h3>
-    <div class="gallery">
-        <div class="gallery-grid">
-            <div class="gallery-item">Add Photo Here</div>
-            <div class="gallery-item">Add Photo Here</div>
-            <div class="gallery-item">Add Photo Here</div>
-            <div class="gallery-item">Add Photo Here</div>
-            <div class="gallery-item">Add Photo Here</div>
-            <div class="gallery-item">Add Photo Here</div>
-        </div>
+  <h3>Gallery</h3>
+  <div class="gallery">
+    <p style="text-align:center;margin-bottom:20px;color:#555">
+      (You can replace these boxes with your shop & product photos anytime)
+    </p>
+    <div class="gallery-grid">
+      <div class="gallery-item">Add Photo</div>
+      <div class="gallery-item">Add Photo</div>
+      <div class="gallery-item">Add Photo</div>
+      <div class="gallery-item">Add Photo</div>
+      <div class="gallery-item">Add Photo</div>
+      <div class="gallery-item">Add Photo</div>
     </div>
+  </div>
 </section>
 
 <section id="updates">
-    <h3>Latest Updates</h3>
-    <div class="updates">
-        <p style="text-align:center;font-size:16px">
-            This section can be used for new arrivals, offers, announcements, and promotions.
-            <br><br>
-            You can easily update this content anytime.
-        </p>
-    </div>
+  <h3>Latest Updates & Offers</h3>
+  <div class="updates">
+    <p style="text-align:center;font-size:16px">
+      🔔 New products, festive offers, and announcements will be displayed here.
+      <br><br>
+      You can edit this section anytime from GitHub.
+    </p>
+  </div>
+</section>
+
+<section id="map">
+  <h3>Our Location</h3>
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=Silapathar%20Assam&output=embed"
+      width="100%"
+      height="350"
+      style="border:0;border-radius:15px"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
 
 <section id="contact">
-    <h3>Contact Us</h3>
-    <div class="contact">
-        <div class="contact-info">
-            <div class="contact-box">
-                <h4>📍 Address</h4>
-                <p>Silapathar, Assam, India</p>
-            </div>
-            <div class="contact-box">
-                <h4>📞 Phone / WhatsApp</h4>
-                <p>9954932233</p>
-            </div>
-            <div class="contact-box">
-                <h4>📧 Email</h4>
-                <p>sethielectronicsco@gmail.com</p>
-            </div>
-            <div class="contact-box">
-                <h4>🕘 Business Hours</h4>
-                <p>9:00 AM - 8:00 PM</p>
-            </div>
-            <div class="contact-box">
-                <h4>🌐 Social Media</h4>
-                <p>
-                    Instagram: <a href="https://instagram.com/sethielectronicsco" target="_blank">@sethielectronicsco</a><br>
-                    Facebook: <a href="https://facebook.com/sethielectronicsco" target="_blank">@sethielectronicsco</a><br>
-                    YouTube: <a href="https://youtube.com/@electronicsco" target="_blank">@electronicsco</a>
-                </p>
-            </div>
-        </div>
+  <h3>Contact Us</h3>
+  <div class="contact">
+    <div class="contact-info">
+
+      <div class="contact-box">
+        <h4>📍 Address</h4>
+        <p>Silapathar, Assam, India</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>📞 Phone / WhatsApp</h4>
+        <p>9954932233</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>📧 Email</h4>
+        <p>sethielectronicsco@gmail.com</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>🕘 Business Hours</h4>
+        <p>9:00 AM - 8:00 PM</p>
+      </div>
+
+      <div class="contact-box">
+        <h4>🌐 Social Media</h4>
+        <p>
+          Instagram: <a href="https://instagram.com/sethielectronicsco" target="_blank">@sethielectronicsco</a><br>
+          Facebook: <a href="https://facebook.com/sethielectronicsco" target="_blank">@sethielectronicsco</a><br>
+          YouTube: <a href="https://youtube.com/@electronicsco" target="_blank">@electronicsco</a>
+        </p>
+      </div>
+
     </div>
+  </div>
 </section>
 
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919954932233" target="_blank" class="whatsapp-float">💬</a>
+
 <footer>
-    <p>
-        © 2026 Sethi Electronics Co | Since 1971<br>
-        Designed for Future Growth
-    </p>
+  <p>
+    © 2026 Sethi Electronics Co | Since 1971<br>
+    Designed for Future Growth
+  </p>
 </footer>
 
 </body>
